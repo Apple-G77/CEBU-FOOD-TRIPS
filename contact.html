@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Information</title>
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
+    <style>
+        body {
+            background-image: url('img.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            width: 90%;
+            height: 80px;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+            gap: 20px;
+        }
+        .buttons a {
+            text-decoration: none;
+            padding: 10px 30px;
+            border-radius: 5px;
+            color: white;
+            background-color: rgba(180, 95, 45, 0.808);
+            transition: background-color 0.3s ease;
+            border: rgba(184, 9, 9, 0.5) 2px solid;
+            box-shadow: rgb(255, 255, 255) 0px 0px 10px;
+            font-size: 20px;
+        }
+        .buttons a:hover {
+            background-color: hsla(0, 89%, 48%, 0.904);
+            color: black;
+        }
+        .logo img {
+            margin-top: 20%;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0px 0px 10px #ffffff;
+            border: 2px solid #c76408;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        table {
+            margin-top: 120px; 
+            width: 90%;
+            height: auto;
+            border-collapse: collapse;
+            margin-left: auto; 
+            margin-right: auto;
+            table-layout: auto;
+        }
+        th, td {
+            padding: 15px;
+            text-align: center;
+            word-wrap: break-word; 
+        }
+        td:hover {
+            background-color: hwb(24 63% 7% / 0.856);
+            color: #131111;
+            font-weight: bold;
+        }
+        th {
+            background-color: hsla(27, 84%, 27%, 0.89);
+        }
+        td {
+            background-color: lab(58.78% 53.09 61.63 / 0.884);
+        }
+        footer {
+            color: black;
+            margin-top: 20px;
+            text-shadow: 0 0 15px #e67105;
+        }
+        @media (max-width: 1366px) and (min-width: 1024px) {
+            header {
+                padding: 10px 15px;
+            }
+            .buttons a {
+                font-size: 18px;
+                padding: 8px 20px;
+            }
+            .logo img {
+                width: 80px;
+                height: 80px;
+            }
+            table {
+                margin-top: 100px;
+                width: 95%;
+            }
+            th, td {
+                padding: 12px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 10px;
+            }
+            .buttons a {
+                font-size: 16px;
+                padding: 6px 15px;
+            }
+            .logo img {
+                width: 70px;
+                height: 70px;
+            }
+            table {
+                margin-top: 80px;
+                width: 100%;
+            }
+            th, td {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 10px;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .buttons {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10px;
+            }
+            .buttons a {
+                font-size: 14px;
+                padding: 8px 20px;
+                margin: 5px 0;
+            }
+            .logo img {
+                width: 60px;
+                height: 60px;
+                margin-top: 10px;
+            }
+            table {
+                width: 100%;
+                margin-top: 70%; 
+            }
+            th, td {
+                font-size: 12px;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo">
+        </div>
+        <nav class="buttons">
+            <a href="about.html">Back</a>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <table border="1" cellspacing="0" cellpadding="10">
+            <thead>
+                <tr>
+                    <th colspan="2">Garabiles Contact Info</th>
+                    <th colspan="2">Oacan Contact Info</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Phone Number</td>
+                    <td>09678341486</td>
+                    <td>Phone Number</td>
+                    <td>09334906307</td>
+                </tr>
+                <tr>
+                    <td>Gmail</td>
+                    <td>garabilesapplemae77@gmail.com</td>
+                    <td>Gmail</td>
+                    <td>oacanjomari@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+        <footer>
+            <p>&copy; Copyright CEBU FOOD TRIPS</p>
+        </footer>
+    </main>
+</body>
+</html>

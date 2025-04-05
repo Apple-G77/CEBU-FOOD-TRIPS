@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEBUFOODTRIPS-MAIN</title>
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
+    <style>
+        body {
+            background-image: url(main.jpg);
+            background-position: center;
+            background-repeat: no-repeat;  
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            overflow-x: hidden; 
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            flex-direction: row; 
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 30px;
+            padding: 10px 20px;
+            border: 2px solid #e41111;
+            justify-content: center;
+            background-color: hsla(27, 89%, 46%, 0.945);
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px hsla(0, 100%, 52%, 0.8);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #ffffffda;
+            transform: scale(1.05);
+            color: black;
+        }
+
+        h1 {
+            text-shadow: 5px 5px 20px #6cff17;
+            color: #a53c0b;
+            font-size: 50px;
+            text-align: center;
+            letter-spacing: 2px;
+            margin-top: 20px;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        header h1 {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        p {
+            color: hwb(9 4% 27%);
+            font-size: 30px;
+            text-align: center;
+            margin-top: 20px;
+            text-shadow: 2px 2px 5px hwb(0 44% 2%);
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .logo img {
+            width: 180px;
+            height: 180px;
+            border: #610808 5px solid;
+            box-shadow: 0px 0px 10px #610808;
+            border-radius: 50%;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+            justify-items: center; 
+        }
+
+        main img {
+            width: 100%; 
+            height: 250px; 
+            object-fit: cover;
+            border-radius: 10px;
+            border: hwb(12 3% 62%) 8px solid;
+            box-shadow: 0px 0px 10px #ff1100cc;
+        }
+        figure {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            width: 100%; 
+            max-width: 250px; 
+        }
+
+        figure:hover {
+            transform: scale(1.45);
+            transition: transform 0.3s ease;
+        }
+
+        figcaption {
+            margin-top: 10px;
+            font-size: 16px;
+            color: rgb(255, 255, 255);
+            text-shadow: 2px 2px 5px #000000;
+            background-color: rgba(196, 34, 5, 0.808);
+            border: #6cff17 5px solid;
+            width: 100%;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        
+        @media (max-width: 1200px) {
+            main {
+                grid-template-columns: repeat(3, 1fr); 
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+
+            nav a {
+                font-size: 18px;
+                padding: 8px 16px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            .logo img {
+                width: 160px;
+                height: 160px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: repeat(2, 1fr); 
+            }
+
+            h1 {
+                font-size: 35px;
+            }
+
+            nav a {
+                font-size: 16px;
+                padding: 6px 12px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .logo img {
+                width: 140px;
+                height: 140px;
+            }
+
+            main img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            main {
+                grid-template-columns: 1fr; 
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            nav a {
+                font-size: 14px;
+                padding: 5px 10px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            .logo img {
+                width: 120px;
+                height: 120px;
+            }
+
+            main img {
+                width: 180px;
+                height: 180px;
+            }
+
+            header {
+                padding-top: 10px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            h1 {
+                margin-top: 60px; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo">
+        </div>
+        <h1>&#9728; CEBU FOOD TRIPS &#9728;</h1>
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+    <p>Please click each photo for more details.</p>
+    <main>
+        <figure>
+            <a href="info.html#shawarma" title="more info">
+                <img src="shawarma.jpg" alt="Shawarma">
+            </a>
+            <figcaption>Top up Shawarma<br>(PitaChoz & Shawarma Wrap)</figcaption>
+        </figure>
+        <figure>
+            <a href="info.html#mangi" title="more info">
+                <img src="mangi.jpg" alt="Mang-Inasal">
+            </a>
+            <figcaption>Mang Inasal<br>(PM2 with Halo-Halo)</figcaption>
+        </figure>
+        <figure>
+            <a href="info.html#barracks" title="more info">
+                <img src="barracks.jpg" alt="Barracks">
+            </a>
+            <figcaption>Loy's Tuslob Buwa<br>(SeaFood Boil & Unli-Tuslob Buwa)</figcaption>
+        </figure>
+        <figure>
+            <a href="info.html#rib" title="more info">
+                <img src="ribshack.jpg" alt="Ribshack">
+            </a>
+            <figcaption>Ribshack<br>(Spareribs and Drink)</figcaption>
+        </figure>
+        <figure>
+            <a href="info.html#frozen" title="more info">
+                <img src="Frozen.jpg" alt="Frozen">
+            </a>
+            <figcaption>Frozen<br>(Siopao, Coke Float, & Fries)</figcaption>
+        </figure>
+        <figure>
+            <a href="info.html#tuslob" title="more info">
+                <img src="tuslob.jpg" alt="Tuslob Buwa">
+            </a>
+            <figcaption>Tuslob Buwa sa Guadalupe<br>(Tuslob Buwa)</figcaption>
+        </figure>
+        <figure>
+            <a href="info.html#minute" title="more info">
+                <img src="minute.jpg" alt="Minute Burger">
+            </a>
+            <figcaption>Minute Burger<br>(Bacon & Cheese)</figcaption>
+        </figure>
+        <figure>
+            <a href="info.html#jobee" title="more info">
+                <img src="jobee.jpg" alt="Jollibee">
+            </a>
+            <figcaption>Jollibee<br>(C1 & Mix&Match)</figcaption>   
+        </figure>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>

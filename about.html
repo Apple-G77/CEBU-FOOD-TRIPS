@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&#10039; Personal Portfolio &#10039;</title>
+    <link rel="icon" href="icon.jpg" type="image/x-icon">
+    <style>
+        body {
+            background-image: url(img.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-shadow: 5px 5px 20px hwb(29 0% 0% / 0.904);
+            color: lab(98.96% 0.01 -0.01);
+            font-size: 3rem;
+            text-align: center;
+            letter-spacing: 2px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        header {
+           
+            padding: 20px;
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 30px;
+            padding: 10px 20px;
+            border: 2px solid lab(52.36% 77.07 60.96);
+            justify-content: center;
+            background-color: hsla(19, 77%, 38%, 0.945);
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px hwb(0 7% 0% / 0.8);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #ffffffda;
+            transform: scale(1.05);
+            color: black;
+        }
+
+        h2 {
+            padding: 20px;
+            font-size: 1.8em;
+            font-weight: bold;
+            background-color: lch(77.84% 44.35 67.26 / 0.952);
+            border: 2px hsla(34, 92%, 53%, 0.13);
+            width: 350px;
+            height: 36px;
+            border-radius: 50px;
+            color: hsl(17, 95%, 32%);
+            text-shadow: 0px 0px 2px hwb(32 2% 74%);
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0 auto;
+        }
+
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin: 60px auto;
+            max-width: 1200px;
+            padding: 10px;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .profile {
+            background: lab(65.84% 35.81 50.21 / 0.151);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px #000000cb;
+            width: 45%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .profile:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px #d60909dc;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            object-fit: cover;
+            border: 3px solid hsl(0, 0%, 100%);
+        }
+
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .profile-img:active {
+            transform: scale(2);
+        }
+
+        .btn-box {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .btn-box a {
+            border: 2px solid hwb(17 2% 48%);
+            background: #5c240a73;
+            font-size: 19px;
+            border-radius: 8px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            letter-spacing: 1px;
+            width: auto;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 0 15px #770303;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn-box a:hover {
+            background-color: rgba(119, 19, 12, 0.733);
+            color: rgb(255, 255, 255);
+        }
+
+        @media screen and (max-width: 1024px) and (min-width: 601px){
+            header {
+                font-size: 50px;
+            }
+
+            .container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .profile {
+                width: 80%;
+            }
+
+            .btn-box a {
+                width: 90%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            header {
+                font-size: 30px;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .profile {
+                width: 80%;
+                padding: 10px;
+            }
+
+            .profile img {
+                width: 120px;
+                height: 120px;
+            }
+
+            h1 {
+                font-size: 2rem;
+                width: 90%;
+            }
+
+            .btn-box {
+                width: 90%;
+            }
+
+            .btn-box a {
+                width: 100%;
+                font-size: 14px;
+                padding: 12px;
+            }
+            h2{
+                font-size: 1.5em;
+                width: 85%;
+                height: 30px;
+            }
+            nav{
+                flex-direction: column;
+                gap: 10px;
+                position: static;
+                top: auto;
+                right: auto;    
+            }
+            nav a {
+                font-size: 20px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>OUR PORTFOLIO</h1>
+        <nav>
+            <a href="index.html">HOME</a>
+        </nav>
+    </header>
+    
+    <section class="container">
+        <div class="profile">
+            <img src="oacan.jpg" alt="Oacan" class="profile-img" title="press to enlarge">
+            <h2>Jomar I. Oacan &#x2764;</h2>
+            <div class="btn-box">
+                <a href="oacan.html" target="_self" title="click me">&#9734;MORE:</a>
+            </div>
+        </div>
+        <div class="profile">
+            <img src="garabiles.jpg" alt="Garabiles" class="profile-img" title="press to enlarge">
+            <h2>Apple Mae D. Garabiles &#x2764;</h2>
+            <div class="btn-box">
+                <a href="garabiles.html" target="_self" title="click me">&#9734;MORE:</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

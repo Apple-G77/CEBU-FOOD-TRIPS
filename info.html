@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information</title>
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
+    <style>
+        body {
+            background-image: url(inf.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+
+        }
+        header {
+            width: 100%;
+            height: 80px;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            padding: 0 20px;
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin-left: 15%;
+            margin-top: 10%;
+        }
+        .logo img {
+            width: 150%;
+            height: 150%;
+            border: hsl(0, 82%, 21%) solid 5px;
+            box-shadow: 0px 0px 10px hsl(17, 100%, 49%);
+            border-radius: 50%;
+        }
+        h1 {
+            font-size: 60px;
+            font-weight: bold;
+            color: #000000;
+            text-shadow: 0 0 15px hwb(29 23% 2%);
+            font-family: 'Times New Roman', Times, serif;
+            justify-content: center;
+            text-align: center;
+            margin-right: 30%;
+            padding: 20px;
+            margin-top: 15%;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+            margin-top: 10%;
+            margin-bottom: 10%;
+            flex-grow: 1; 
+            padding-bottom: 60px;
+        }
+        section {
+            background-color: hsla(98, 79%, 46%, 0.933);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #ff090980;
+            max-width: 90%;
+            text-align: center;
+            margin: 0 auto;
+            margin-left: 20%;
+        }
+        section p, ol, ul {
+            font-size: 20px;
+            color: hsl(27, 93%, 17%);
+            text-align: center;
+            margin-top: 20px;
+            text-shadow: 2px 2px 3px hsla(0, 0%, 78%, 0.788);
+            letter-spacing: .5px;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: justify;
+        }
+        aside {
+            background-color: hwb(27 11% 23% / 0.863);
+            padding: 10px;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(145, 7, 7, 0.829);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 5%;
+        }
+        aside img {
+            width: 20vw;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px hsl(0, 0%, 100%);
+            margin-bottom: 20px;
+        }
+        iframe {
+            width: 55%;
+            height: 30vh;
+            border: 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgb(255, 255, 255);
+        }
+        footer {
+            background-color: hsla(22, 82%, 46%, 0.425);
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+            z-index: 10; 
+            margin-top: auto;
+        }
+
+        footer nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap; 
+            margin: 0;
+        }
+
+        footer nav a:nth-child(1){
+            margin-right: 50%;
+        }
+
+        footer nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px; 
+            padding: 10px 20px;
+            border: 2px solid white;
+            border-radius: 5px;
+            background-color: hsla(139, 89%, 32%, 0.911);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin: 5px; 
+        }
+
+        footer nav a:hover {
+            background-color: rgba(123, 255, 128, 0.822);
+            transform: scale(1.08);
+            color: black;
+        }
+
+
+        @media screen and (max-width: 600px) {
+            footer {
+                padding: 5px; 
+            }
+
+            footer nav a {
+                font-size: 14px; 
+                padding: 8px 16px; 
+            }
+
+            footer nav a:nth-child(1){
+                margin-right: 0; 
+            }
+        }
+
+        @media (max-width: 1200px){
+            .logo img {
+                width: 120%;
+            }
+            h1 {
+                font-size: 50px;
+                margin-right: 10%;
+            }
+            main {
+                grid-template-columns: 1fr;
+                gap: 10px;
+                margin-top: 5%;
+                margin-bottom: 5%;
+            }
+            aside img {
+                width: 30vw;
+            }
+            iframe {
+                width: 90%;
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 0 10px;
+            }
+            .logo {
+                width: 60px;
+                height: 60px;
+                margin-left: 10%;
+                margin-top: 5%;
+            }
+            h1 {
+                font-size: 40px;
+                margin-right: 0;
+                margin-top: 5%;
+            }
+            main {
+                margin-top: 5%;
+                margin-bottom: 5%;
+                padding: 10px;
+            }
+            section {
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+            aside img {
+                width: 50vw;
+            }
+            iframe {
+                width: 100%;
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 0 5px;
+            }
+            .logo {
+                width: 50px;
+                height: 50px;
+                margin-left: 5%;
+                margin-top: 2%;
+            }
+            h1 {
+                font-size: 25px;
+                margin-top: 5%;
+            }
+            main {
+                margin-top: 5%;
+                margin-bottom: 5%;
+                padding: 5px;
+            }
+            section {
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+            aside img {
+                width: 60vw;
+            }
+            iframe {
+                width: 100%;
+                height: 120px;
+            }
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="top">
+        <div class="logo">
+        <img src="logo.jpg" alt="Logo">
+        </div>
+        <h1>CEBU FOOD TRIPS<br>DETAILS</h1>
+    </header>
+    <main>
+    <section id="shawarma">
+        <p>Top-up Shawarma, is a friendly budget snack starting at 49 pesos to 89 pesos. The store open at 8am to 11pm and in Monday to Thursday and during friday the store is open from 8am to 7pm and in that day they have a buy 1 take 1 shawarma wrap and shawarma rice at only 89 pesos.</p>
+            <ol>
+            <p> TOP UP SHAWARMA MENU:</p>
+            <li>Shawarma Wrap Reg  (P54)</li>
+            <li>Shawarma Wrap w/ Cheese  (P69)</li>
+            <li>Shawarma  Rice Reg   (P49)</li>
+            <li>Shawarma Rice w/ Egg    (P64)</li>
+            <li>Shawarma Rice w/ Egg & Cheese   (P81)</li>
+            <li>Shawarma PitaChoz   (P69)</li>
+            <li>Shawarma Burrito Reg   (P69)</li>
+            <li>Shawarma Burrito w/ Cheese  (P82)</li>
+            <li>Shawarma Et-Choz    (P89)</li>
+        </ol>
+    </section>
+    <aside>
+        <img src="warmapic.jpg">
+        <iframe src="https://www.google.com/maps/embed?pb=!3m2!1sen!2sph!4v1743760213751!5m2!1sen!2sph!6m8!1m7!1s12iLqH4VDSesDAnkP2l_EA!2m2!1d10.32888138966353!2d123.8875837694779!3f167.203404421896!4f6.467385702313905!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
+    </aside>
+    <section id="mangi">
+        <p>Mang Inasal, is one of the famous fast food restaurant in Philippines and their prices are affordable yet high quality foods. They also have an unlimited rice worth 167 pesos to 192 pesos and unlimited sinigang soup. This specific Mang Inasal is located at Gaisano Capital, Cebu City Store Hours: 8:30 AM-9PM</p>
+        <a href="https://www.manginasal.ph/news/menu-and-prices" target="_blank" title="Menu" style="text-decoration: none; color:blue;">&star;Mang-inasal menu/price list&star;</a>
+        <ol>
+            <p>OTHER LOCATION:</p>
+            <li>Mang Inasal Ayala IT PARK Branch</li>
+            <li>Mang Inasal Centro Mandaue Branch</li>
+            <li>Mang Inasal City Mall Consolacion Branch</li>
+            <li>Mang Inasal Danao Branch</li>
+            <li>Mang Inasal Colon Branch</li>
+            <li>Mang Inasal 138 Mall Branch</li>
+            <li>Mang Inasal E Mall Branch</li>
+            <li>Mang Inasal Gaisano Balamban Branch</li>
+            <li>Mang Inasal Gaisano Car Car Branch</li>
+            <li>Mang Inasal Gaisano Liloan Branch</li>
+            <li>Mang Inasal Gaisano Minglanilla Branch</li>
+            <li>Mang Inasal Gaisano North Basak Branch</li>
+            <li>Mang Inasal Gaisano Tabunok Branch</li>
+            <li>Mang Inasal J Center Mall Branch</li>
+            <li>Mang Inasal Marina Mall Branch</li>
+            <li>Mang Inasal MEZ 2 Branch</li>
+        </ol>
+    </section>
+    <aside>
+        <img src="mangistore.jpg">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d490.6969207659846!2d123.89654691776583!3d10.295757165235438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a99bfd3592b4f9%3A0x330ddcb33adc6c85!2sMang%20Inasal%20-%20Gaisano%20South%20Capital!5e0!3m2!1sen!2sph!4v1743763859647!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </aside>
+    <section id="barracks">
+        <ol> 
+            <li>THE BARRACKS IN CARBON BRANCH</li>
+                <ul>
+                    <li>Open: </li>
+                    <li>Monday- Sunday</li>
+                    <li>10:00am- 10:00pm</li>
+                </ul>
+            <li>DINE IN UNLI BUWA</li>
+            
+                <ul>
+                    <li>150 pesos per set with FREE 10pcs. POSO (NO PERSON LIMIT)</li>
+                    <li>Additional poso. Applicable at The Barracks Only!</li>
+                    <li>1pc. 8.00 pesos</li>
+                    <li>3pcs. 20.00 pesos</li>
+                    <li>5pcs. 40.00 pesos</li>
+                    <li>7pcs. 50.00 pesos</li>
+                    <li>10pcs. 80.00 pesos</li>
+                    <li>15pcs  100 00 pesos</li>
+                </ul>
+            <li>PURE UTOK</li>
+                <ul>
+                    <li>200 pesos per set with FREE 10pcs POSO</li>
+                    <li>Additional poso 5.00 pesos each</li>
+                    <li>250ml TUB mix with GINALING</li>
+                    <li>200 pesos per set without POSO</li>
+               </ul>
+        </ol>
+    </section>
+    <aside>
+        <img src="buwa.jpg">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.609097563575!2d123.89505347408132!3d10.293046567925657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a99b40b6c17c2d%3A0xc9b56e934acd0acd!2sThe%20Barracks%20-%20Carbon!5e0!3m2!1sen!2sph!4v1743767637110!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </aside>
+    <section id="rib">
+        <p>Ribshack is a popular, budget-friendly restaurant in Cebu City known for its grilled dishes, particularly ribs, and offers unlimited rice, with locations in various malls and areas.</p>
+            <ul>
+             <li>Open: </li>
+             <li>Monday - Sunday</li>
+             <li>10:00 - 21:00</li>
+            </ul>
+            <p>Ribshack Menu:</p>
+             <ul>
+                <li>Spareribs   (₱139) </li>
+                <li>Korean Spicy Chicken Bbq    (₱210)</li>
+                <li>Backribs Backribs    (₱289)</li>
+                <li>Korean Spicy Pork   (₱210)</li>
+                <li>Hungarian Sausage   (₱119)</li>
+                <li>Jumbo Chicken Pecho     (₱205)</li>
+                <li>Boneless Bangus Large   (₱235)</li>
+             </ul>
+    </section>
+    <aside>
+        <img src="rib.jpg">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d981.387792575144!2d123.90011463460803!3d10.297701063544773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a999f9b64933d7%3A0xc5467a8c6f1e8c4b!2sRibshack%20-%20Super%20Metro%20Colon!5e0!3m2!1sen!2sph!4v1743768978438!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </aside>
+    <section id="frozen">
+        <p>FROZEN KO .</p>
+            <ol>
+            <li>Shawarma Wrap</li>
+            <li>Shawarma Rice</li>
+            <li>Shawarma Fries</li>
+            <li>Shawarma Nachos</li>
+            <li>Shawarma Burger</li>
+        </ol>
+    </section>
+    <aside>
+        <img src="rib.jpg">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d981.387792575144!2d123.90011463460803!3d10.297701063544773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a999f9b64933d7%3A0xc5467a8c6f1e8c4b!2sRibshack%20-%20Super%20Metro%20Colon!5e0!3m2!1sen!2sph!4v1743768978438!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </aside>
+    <section id="tuslob">
+        <p>Tuslob buwa in Guadalupe, is affordable especially to us students. Sometimes they have a UNLIMITED BUWA. They also have many variety of their add ons which is listed in our menu. Also they ask the customers to take a photo and then ost it on their social media. </p>
+          <ul>
+            <li>Open: Monday-Saturday 12:00pm-11:30pm</li>
+            <li>Monday-Saturday</li>
+            <li>12:00pm-11:30pm</li>
+          </ul>  
+          <ul>
+          <p>BUWA MENU :</p>
+         <li>UNLI Buwa Set (6 Poso): ₱150.00</li>
+         <li>Buwa Set (9 Poso): ₱150.00</li>
+         <li>Buwa only: ₱60.00</li>
+         <li>Poso: ₱10.00</li>
+         </ul>
+           <ul>
+          <li>Sisig: ₱70.00</li>
+          <li>liGinabot: ₱30.00</li>
+          <li>Batikun: ₱30.00</li>
+          <li>Silomal: ₱10.00</li>
+          <li>Dynamite: ₱10.00</li>
+          <li>Lumpia Taugi: ₱5.00</li>
+          <li>Tempura (3pcs): ₱20.00</li>
+          <li>Fried Chicken: ₱45.00</li>
+        </ul>
+    </section>
+    <aside>
+        <img src="tuslo.jpg">
+        <iframe src="https://www.google.com/maps/embed?pb=!3m2!1sen!2sph!4v1743760213751!5m2!1sen!2sph!6m8!1m7!1s12iLqH4VDSesDAnkP2l_EA!2m2!1d10.32888138966353!2d123.8875837694779!3f167.203404421896!4f6.467385702313905!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
+    </aside>
+    
+    <section id="minute">
+        <p>Minute Burger is a well-known, affordable fast-food burger chain in the Philippines, founded in 1982, offering a variety of burgers and known for its "Buy 1 Take 1" deals and "Minute Burger super dressing".</p>
+            <ul>
+                
+            <li>Buy 1 Take 1 Bacon Cheese Burger    ₱97</li>
+            <li>Buy 1 Take 1 Black Pepper Burger	₱91</li>
+            <li>Buy 1 Take 1 50/50 Veggie Chicken Burger	₱87</li>
+            <li>Buy 1 Take 1 Beef Shawarma Burger	₱92</li>
+            <li>Buy 1 Take 1 Roasted Sesame Crispy Chicken Burger	₱95</li>
+            <li>Iced Mocha  ₱26</li>
+            <li>Buy 1 Take 1 SteakBurger    ₱136</li>
+            <li>Chimichurri Burger	₱100</li>
+            <li>Chimichurri Burger with Leslie's Premium Chips	₱132</li>
+            <li>Chimichurri Burger with Milktea     ₱131</li>
+            <li>Chimichurri Burger with Nachos and Drinks	₱177</li>
+        </ul>
+    </section>
+    <aside>
+        <img src="min.jpg">
+        <iframe src="https://www.google.com/maps/embed?pb=!3m2!1sen!2sph!4v1743771265951!5m2!1sen!2sph!6m8!1m7!1sMu1fo8jaqMLRAX6f_kogpQ!2m2!1d10.3245478190301!2d123.8902701919643!3f334.8971034613349!4f-5.451790141525677!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </aside>
+    <section id="jobee">
+        <p>Jollibee is a Filipino fast-food chain, the flagship brand of Jollibee Foods Corporation (JFC), known for its unique menu, including Chickenjoy, Yumburger, and Jolly Spaghetti, and is the largest fast-food chain in the Philippines.</p>
+            <a href="https://jollibeemenuprice.ph/" target="_blank" title="Menu" style="text-decoration: none; color:blue;">&star;Jollibee menu/price list&star;</a>
+            <ul>
+                <li>Ayala Center Cebu</li>
+                <li>Cebu Colon</li>
+                <li>Cebu Consolacion</li>
+                <li>Cebu Gaisano Countrymall</li>
+                <li>Cebu Gorordo</li>
+                <li>Cebu Guadalupe</li>
+                <li>Cebu Mango</li>
+                <li>Cebu Oriente</li>
+                <li>Cebu Sto. Niño</li>
+                <li>Cebu University of San Carlos</li>
+                <li>Colon South/Leon Kilat</li>
+                <li>Gaisano Center Bogo</li>
+                <li>Robinsons Place Cebu</li>
+            </ul>
+    </section>
+    <aside>
+        <img src="jobs.jpg">
+        <iframe src="https://www.google.com/maps/embed?pb=!3m2!1sen!2sph!4v1743773085387!5m2!1sen!2sph!6m8!1m7!1seRDrIw49zWCU5E1enIy65w!2m2!1d10.33003555835125!2d123.8977163558119!3f124.5422838812216!4f-28.50878447734098!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </aside>
+</main>
+<footer>
+    <nav>
+        <a href="#top">Back to TOP</a>
+        <a href="main.html">MAIN</a>
+        <a href="index.html">HOME</a>
+    </nav>
+</footer>
+</body>
+</html>

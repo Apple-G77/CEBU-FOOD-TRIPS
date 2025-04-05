@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>&#9728; CEBU FOOD TRIPS &#9728;</title>
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
+    <style>
+        body {
+            background-image: url(ind.jpg);
+            background-position: center;
+            background-repeat: no-repeat;  
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 20px;
+            position: relative;
+            margin-top: 30px;
+        }
+
+        h1 {
+            text-shadow: 5px 5px 20px hwb(4 10% 12% / 0.61);
+            color: hsl(29, 83%, 31%);
+            font-size: 3rem;
+            text-align: center;
+            letter-spacing: 2px;
+            margin-left: 20px;
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px; 
+            left: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 120px;
+            height: 120px;
+            box-shadow: 0px 0px 10px #863803;
+            border: 2px solid #c76408;
+            border-radius: 50%;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: hsl(32, 69%, 20%);
+            text-shadow: #ffffff 5px 5px 20px;
+            font-size: 1.25rem;
+            width: 80%;
+            max-width: 1200px;
+            height: auto;
+            padding: 20px;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0px 0px 10px #8b4605;
+            border: 2px solid white;
+            border-radius: 10px;
+            background-color: #a3f070ec;
+            padding: 20px;
+            margin: 0 auto;
+        }
+
+        .container:hover {
+            transform: scale(1.05);
+        }
+
+        h2 {
+            text-shadow: 5px 5px 20px hsl(32, 92%, 50%);
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            text-align: justify;
+            font-size: 1.125rem;
+            max-width: 80%;
+            letter-spacing: .5px;
+            margin-bottom: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            gap: 20px;
+        }
+
+        .buttons a {
+            text-decoration: none;
+            padding: 10px 30px;
+            border-radius: 5px;
+            color: white;
+            background-color: hsla(9, 79%, 31%, 0.945);
+            transition: background-color 0.3s ease;
+            border: #3ba80980 2px solid;
+            box-shadow: #46ff0d 0px 0px 10px;
+            font-size: 1.125rem;
+        }
+
+        .buttons a:hover {
+            background-color: rgba(255, 33, 33, 0.986);
+            color: black;
+        }
+
+        footer {
+            width: 100%;
+            height: 50px;
+            padding: 5px;
+            border-radius: 30px;
+            box-shadow: 0px 0px 10px white;
+            background-color: rgba(196, 75, 5, 0.911);
+            color: white;
+            text-align: center;
+            position: relative; 
+            margin-top: auto; 
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 1rem;
+            }
+
+            .logo img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .buttons a {
+                font-size: 0.9rem;
+                padding: 6px 15px;
+            }
+
+            footer p {
+                font-size: 0.8rem;
+            }
+        }
+        @media screen and (min-width: 481px) and (max-width: 1024px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .logo img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+
+            .buttons a {
+                font-size: 1rem;
+                padding: 8px 20px;
+            }
+
+            footer p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            h1 {
+                font-size: 3.5rem;
+            }
+
+            .logo img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .container {
+                width: 60%;
+                padding: 25px;
+            }
+
+            .buttons a {
+                font-size: 1.25rem;
+                padding: 10px 35px;
+            }
+
+            footer p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo">
+        </div>
+        <h1>&star; CEBU FOOD TRIPS &star;</h1>
+    </header>
+    <main>
+        <div class="container">
+            <h2>What our website is about:</h2>
+            <p>
+                &#10132; This website is about our food trips here in Cebu. Anyone who loves to explore Cebu, Philippines and have budget-friendly food trips can rely on this website to help you decide where to eat and what to eat. 
+                We will provide you with a list of Food Trips that you might also want to try. 
+                We will also provide you with the details of the stores, including their location, name of the stores, and their menus.
+            </p>
+        </div>
+    </main>
+
+    <nav class="buttons">
+        <a href="main.html">&#10148; MAIN</a>
+        <a href="about.html">&#10148; ABOUT US</a>
+    </nav>
+
+    <footer>
+        <p>&copy; 2025 CEBU FOOD TRIPS. All rights reserved.</p>
+    </footer>
+</body>
+</html>
