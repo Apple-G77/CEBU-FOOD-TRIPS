@@ -23,6 +23,7 @@
         header {
             width: 100%;
             display: flex;
+            flex-direction: column; 
             justify-content: center;
             align-items: center;
             padding: 10px 20px;
@@ -32,12 +33,23 @@
 
         h1 {
             text-shadow: 5px 5px 20px hwb(4 10% 12% / 0.61);
-            color: hsl(29, 83%, 31%);
+            color: lch(62.6% 82.62 56.9);
             font-size: 3rem;
             text-align: center;
             letter-spacing: 2px;
             margin-left: 20px;
         }
+        h2 {
+            text-shadow: 5px 5px 20px lab(100% 0.01 -0.01);
+            color: hwb(29 1% 67%);
+            background-color: #c7640888;
+            border-radius: 20px;
+            font-size: 3rem;
+            text-align: center;
+            letter-spacing: 2px;
+            margin-left: 20px;
+        }
+
 
         .logo {
             position: absolute;
@@ -93,7 +105,7 @@
             transform: scale(1.05);
         }
 
-        h2 {
+        h3 {
             text-shadow: 5px 5px 20px hsl(32, 92%, 50%);
             font-size: 2rem;
             margin-bottom: 10px;
@@ -159,6 +171,10 @@
         }
         @media screen and (max-width: 480px) {
             h1 {
+                font-size: 1rem;
+            }
+            h2{
+                margin-top: 15%;
                 font-size: 1rem;
             }
 
@@ -238,10 +254,11 @@
             <img src="logo.jpg" alt="Logo">
         </div>
         <h1>&star; CEBU FOOD TRIPS &star;</h1>
+        <h2>"EAT SMART, SPEND LESS"</h2>
     </header>
     <main>
         <div class="container">
-            <h2>What our website is about:</h2>
+            <h3>What our website is about:</h3>
             <p>
                 &#10132; This website is about our food trips here in Cebu. Anyone who loves to explore Cebu, Philippines and have budget-friendly food trips can rely on this website to help you decide where to eat and what to eat. 
                 We will provide you with a list of Food Trips that you might also want to try. 
